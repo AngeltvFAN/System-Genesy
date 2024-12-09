@@ -1,31 +1,29 @@
-            // PROPERTIES
-            Button guna = new Button();
-            Label label_1 = new Label();
-            TextBox keyBox = new TextBox();
-            Form ad = new Form();
-            // ADS FORM
-            ad.BackColor = Color.FromArgb(20,20,20);
-            ad.ShowInTaskbar = false;
-            ad.ShowIcon = false;
-            ad.StartPosition = FormStartPosition.CenterScreen;
-            ad.TopMost = true;
-            ad.FormBorderStyle = FormBorderStyle.None;
-            ad.Text = "dr-system.exe";
-            ad.MaximizeBox = false;
-            ad.Width = 695;
-            ad.Height = 505;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-            // UI ELEMENTS / PROPERTIES
-            guna.Parent = ad;
-            guna.Width = 65;
-            guna.Height = 35;
-            guna.Location = new Point(428, 222);
-            guna.BackColor = Color.FromArgb(35, 35, 35);
-            guna.Click += new EventHandler(guna_Click);
-            guna.Text = "copy";
-            
-            void guna_Click(object sender, EventArgs e)
-            {
-                string c = "passed test.";
-                MessageBox.Show(c)
-            }
+namespace kaziks
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Title = GenerateRandomName(40);
+            Console.WriteLine("Ok, so, you got hacked by HydraX exploit, all your data will be erased from this device  and it will be send to a remote server that we can handle, just cry.");
+
+                    //Btw, if you arent blind you can easily see that this is a JOKE, the script is just made to scare, it inst real.
+            Console.ReadKey();
+        }
+        public static string GenerateRandomName(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            Random random = new Random();
+            StringBuilder result = new StringBuilder(length);
+            for (int i = 0; i < length; i++)
+            {result.Append(chars[random.Next(chars.Length)]);}
+            return result.ToString();
+        }
+    }
+}
