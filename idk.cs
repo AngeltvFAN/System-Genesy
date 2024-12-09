@@ -20,10 +20,7 @@
             guna.Width = 65;
             guna.Height = 35;
             guna.Location = new Point(428, 222);
-            guna.BorderThickness = 1;
-            guna.BorderColor = Color.FromArgb(45, 45, 45);
-            guna.FillColor = Color.FromArgb(35, 35, 35);
-            guna.Animated = true;
+            guna.BackColor = Color.FromArgb(35, 35, 35);
             guna.Click += new EventHandler(guna_Click);
             guna.Text = "copy";
             
