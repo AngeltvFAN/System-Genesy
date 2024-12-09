@@ -1,47 +1,34 @@
-namespace gui
-{
-    partial class Form1
-    {
-        /// <summary>
-        /// Variable del diseñador necesaria.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+            // PROPERTIES
+            Button guna = new Button();
+            Label label_1 = new Label();
+            TextBox keyBox = new TextBox();
+            Form ad = new Form();
+            // ADS FORM
+            ad.BackColor = Color.FromArgb(20,20,20);
+            ad.ShowInTaskbar = false;
+            ad.ShowIcon = false;
+            ad.StartPosition = FormStartPosition.CenterScreen;
+            ad.TopMost = true;
+            ad.FormBorderStyle = FormBorderStyle.None;
+            ad.Text = "dr-system.exe";
+            ad.MaximizeBox = false;
+            ad.Width = 695;
+            ad.Height = 505;
 
-        /// <summary>
-        /// Limpiar los recursos que se estén usando.
-        /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
+            // UI ELEMENTS / PROPERTIES
+            guna.Parent = ad;
+            guna.Width = 65;
+            guna.Height = 35;
+            guna.Location = new Point(428, 222);
+            guna.BorderThickness = 1;
+            guna.BorderColor = Color.FromArgb(45, 45, 45);
+            guna.FillColor = Color.FromArgb(35, 35, 35);
+            guna.Animated = true;
+            guna.Click += new EventHandler(guna_Click);
+            guna.Text = "copy";
+            
+            void guna_Click(object sender, EventArgs e)
             {
-                components.Dispose();
+                string c = "passed test.";
+                MessageBox.Show(c)
             }
-            base.Dispose(disposing);
-        }
-
-        #region Código generado por el Diseñador de Windows Forms
-
-        /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
-            this.ResumeLayout(false);
-
-        }
-
-        #endregion
-    }
-}
-
